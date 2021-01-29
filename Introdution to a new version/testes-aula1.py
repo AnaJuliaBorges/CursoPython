@@ -1,0 +1,1 @@
+dia = 10 mes = 10ano = 2018print(dia, mes, ano, sep="/ ")
