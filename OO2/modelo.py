@@ -46,14 +46,11 @@ class Playlist:
         self.name = name
         self.__programs = programs
 
-    @property
-    def listing(self):
-        return self.__programs
+    def __getitem__(self, item):
+        return self.__programs[item]
 
-    @property
-    def length(self):
+    def __len__(self):
         return len(self.__programs)
-
 
 zfp = Serie('Zoey e sua fantástica playlist', 2020, 1)
 zfp.give_likes()
@@ -75,7 +72,7 @@ rent.give_likes()
 
 musicals = Playlist('Musicals', [annie, hsm_series, rent, zfp])
 
-print(f'{musicals.name} has {musicals.length} programs')
+print(f'{musicals.name} has {len(musicals)} programs:')
 
-for program in musicals.listing:
+for program in musicals:
     print(program)
