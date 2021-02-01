@@ -20,7 +20,7 @@ class Audiovisual:
         self.__likes += 1
 
     def __str__(self):
-        return f'{program.name} - {program.year} - {program.likes} likes'
+        return f'{self.name} - {self.year} - {self.likes} likes'
 
 
 class Film(Audiovisual):
@@ -29,7 +29,8 @@ class Film(Audiovisual):
         self.duration = duration
 
     def __str__(self):
-        return f'{program.name} - {program.year} - {program.duration} min - {program.likes} likes'
+        return f'{self.name} - {self.year} - {self.duration} min - {self.likes} likes'
+
 
 class Serie(Audiovisual):
     def __init__(self, name, year, seasons):
@@ -37,16 +38,44 @@ class Serie(Audiovisual):
         self.seasons = seasons
 
     def __str__(self):
-        return f'{program.name} - {program.year} - {program.seasons} seasons - {program.likes} likes'
+        return f'{self.name} - {self.year} - {self.seasons} season(s) - {self.likes} likes'
 
-vingadores = Film('vingadores: guerra infinita', 2018, 160)
-atlanta = Serie('atlanta', 2018, 2)
-vingadores.give_likes()
-vingadores.give_likes()
 
-atlanta.give_likes()
+class Playlist:
+    def __init__(self, name, programs):
+        self.name = name
+        self.__programs = programs
 
-list = [atlanta, vingadores]
+    @property
+    def listing(self):
+        return self.__programs
 
-for program in list:
+    @property
+    def length(self):
+        return len(self.__programs)
+
+
+zfp = Serie('Zoey e sua fantástica playlist', 2020, 1)
+zfp.give_likes()
+zfp.give_likes()
+
+annie = Film('Annie', 1999, 92)
+annie.give_likes()
+annie.give_likes()
+annie.give_likes()
+
+hsm_series = Serie('High School Musical: A série', 2019, 1)
+hsm_series.give_likes()
+hsm_series.give_likes()
+hsm_series.give_likes()
+hsm_series.give_likes()
+
+rent = Film('rent: os boêmios', 2005, 135)
+rent.give_likes()
+
+musicals = Playlist('Musicals', [annie, hsm_series, rent, zfp])
+
+print(f'{musicals.name} has {musicals.length} programs')
+
+for program in musicals.listing:
     print(program)
