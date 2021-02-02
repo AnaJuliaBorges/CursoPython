@@ -10,7 +10,7 @@ print(origin_currency, destiny_currency)
 
 '''
 
-url = "https://www.bytebank.com.br/cambio?moedaorigem=real&moedadestino=dolar&valor=1500"
+url = "https://www.bytebank.com.br/cambio?moedaorigem=moedadestino&moedadestino=dolar&valor=1500"
 exchange = ExtractArgumentsURL(url)
 origin_currency, destiny_currency = exchange.returns_currency()
 value = exchange.return_value()
