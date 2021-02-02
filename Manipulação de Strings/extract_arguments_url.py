@@ -45,3 +45,16 @@ class ExtractArgumentsURL:
         begin_substring_value = self.find_index_begin_substring(search_value)
         value = self.url[begin_substring_value:]
         return value
+
+    def __str__(self):
+        origin_currency, destiny_currency = self.returns_currency()
+        str_representation = f"Valor: {self.return_value()}\n" \
+                             f"Moeda Origem: {origin_currency} \n" \
+                             f"Moeda Destino: {destiny_currency}"
+        return str_representation
+
+    def __len__(self):
+        return len(self.url)
+
+    def __eq__(self, other):
+        return self.url == other.url

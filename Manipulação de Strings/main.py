@@ -14,4 +14,6 @@ url = "https://www.bytebank.com.br/cambio?moedaorigem=moedadestino&moedadestino=
 exchange = ExtractArgumentsURL(url)
 origin_currency, destiny_currency = exchange.returns_currency()
 value = exchange.return_value()
-print(origin_currency, destiny_currency, value)
+
+print(exchange)
+print(f"Tamanho: {len(exchange)}")
