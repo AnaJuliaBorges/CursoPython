@@ -8,5 +8,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Jogos" />
     <orderEntry type="module" module-name="OO2" />
+    <orderEntry type="module" module-name="Manipulação de Strings" />
   </component>
 </module>
