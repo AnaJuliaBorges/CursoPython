@@ -1,11 +1,16 @@
-from banco import ContaCorrente
+from banco import CheckingAccount, SavingAccount, InvestimentAccount
 
-conta_da_maria = ContaCorrente(112834)
-conta_da_maria.deposit(289)
+maria_account = CheckingAccount(112834)
+maria_account.deposit(500)
+maria_account.next_month()
 
-conta_do_guilherme = ContaCorrente(218742)
-conta_do_guilherme.deposit(30)
+guilherme_account = SavingAccount(218742)
+guilherme_account.deposit(500)
+guilherme_account.next_month()
 
-accounts = [conta_do_guilherme, conta_da_maria]
+accounts = [maria_account, guilherme_account]
 for account in accounts:
     print(account)
+
+
+julia_accounts = InvestimentAccount(34)
