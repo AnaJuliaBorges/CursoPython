@@ -1,5 +1,7 @@
 from abc import ABCMeta, abstractmethod
+from functools import total_ordering
 
+@total_ordering
 class Account(metaclass=ABCMeta):
     def __init__(self, code):
        self.code = code
@@ -15,8 +17,17 @@ class Account(metaclass=ABCMeta):
     def next_month(self):
         pass
 
+    def __eq__(self, other):
+        if (type(other) != Account):
+            return False
+
+        return self.code == other.code and self.balance == other.balance
+
     def __lt__(self, other):
-        return self.balance < other.balance
+        if self.balance != other.balance:
+            return self.balance < other.balance
+
+        return self.code < other.code
 
 
 class CheckingAccount(Account):
@@ -24,11 +35,6 @@ class CheckingAccount(Account):
     def next_month(self):
         self.balance -= 2
 
-    def __eq__(self, other):
-        if (type(other) != CheckingAccount):
-            return False
-
-        return self.code == other.code
 
 class SavingAccount(Account):
 

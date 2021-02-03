@@ -3,15 +3,14 @@ from operator import attrgetter
 
 maria_account = CheckingAccount(112834)
 maria_account.deposit(500)
-maria_account.next_month()
 
 guilherme_account = SavingAccount(218742)
 guilherme_account.deposit(500)
-guilherme_account.next_month()
 
-deborah_account = CheckingAccount(112834)
+deborah_account = CheckingAccount(236819)
+deborah_account.deposit(300)
 
-accounts = [maria_account, guilherme_account]
+accounts = [guilherme_account, maria_account]
 for account in accounts:
     print(account)
 
@@ -22,6 +21,16 @@ accounts.append(deborah_account)
 
 for account in sorted(accounts, key=attrgetter("balance")):
     print(account)
+print("\n")
+
+for account in sorted(accounts, key=attrgetter("balance", "code")):
+    print(account)
+print("\n")
+
+for account in sorted(accounts):
+    print(account)
+print("\n")
 
 for account in sorted(accounts, reverse=True):
     print(account)
+print("\n")
