@@ -15,6 +15,9 @@ class Account(metaclass=ABCMeta):
     def next_month(self):
         pass
 
+    def __lt__(self, other):
+        return self.balance < other.balance
+
 
 class CheckingAccount(Account):
 
