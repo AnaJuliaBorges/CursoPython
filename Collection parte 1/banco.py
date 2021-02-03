@@ -21,6 +21,11 @@ class CheckingAccount(Account):
     def next_month(self):
         self.balance -= 2
 
+    def __eq__(self, other):
+        if (type(other) != CheckingAccount):
+            return False
+
+        return self.code == other.code
 
 class SavingAccount(Account):
 

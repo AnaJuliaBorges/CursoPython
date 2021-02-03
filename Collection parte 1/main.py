@@ -8,9 +8,12 @@ guilherme_account = SavingAccount(218742)
 guilherme_account.deposit(500)
 guilherme_account.next_month()
 
+deborah_account = CheckingAccount(112834)
+
 accounts = [maria_account, guilherme_account]
 for account in accounts:
     print(account)
 
+#julia_accounts = InvestimentAccount(34)
 
-julia_accounts = InvestimentAccount(34)
+print(maria_account == deborah_account)
