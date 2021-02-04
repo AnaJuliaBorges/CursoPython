@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Collection parte 1/.idea/Collection parte 1.iml" filepath="$PROJECT_DIR$/../Collection parte 1/.idea/Collection parte 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Jogos/.idea/Jogos.iml" filepath="$PROJECT_DIR$/../Jogos/.idea/Jogos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Manipulação de Strings/.idea/Manipulação de Strings.iml" filepath="$PROJECT_DIR$/../Manipulação de Strings/.idea/Manipulação de Strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/OO.iml" filepath="$PROJECT_DIR$/.idea/OO.iml" />
       <module fileurl="file://$PROJECT_DIR$/../OO2/.idea/OO2.iml" filepath="$PROJECT_DIR$/../OO2/.idea/OO2.iml" />
     </modules>
