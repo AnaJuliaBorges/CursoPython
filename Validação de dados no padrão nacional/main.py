@@ -1,4 +1,9 @@
-from Cpf import Cpf
+from ValidDocument import Document
 
-cpf_um = Cpf("15316264754")
-print(cpf_um)
+example_cpf = "15316264754"
+cpf = Document.create_document(example_cpf)
+print(cpf)
+
+example_cnpj = "35379838000112"
+cnpj = Document.create_document(example_cnpj)
+print(cnpj)
